@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculo de Compras</h1>
+        <form method="post" action="{{ url_for('ejercicio1') }}">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" required>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" required>
+            <label for="tarros_pintura">Tarros de Pintura a Comprar:</label>
+            <input type="number" name="tarros_pintura" required>
+            <input type="submit" value="Calcular" class="button">
+        </form>
+    </div>
+</body>
+</html>
